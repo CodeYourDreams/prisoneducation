@@ -1,0 +1,419 @@
+{"preconditionCandidates":[{"questionText":"
+<p>
+ What would happen to the same lines of code if instead the variables became strings? Remember, strings always have quotation marks (\"\") surrounding them, because they are used like words and text. Careful, numbers surrounded by quotation marks are not integers, but strings!
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ 1: x = \"50\"
+</p>
+<p>
+ 2: y = \"250\"
+</p>
+<p>
+ 3: z = \"250\" + x + y
+</p>
+<p>
+ 4: z = z + z
+</p>
+<p>
+ <!--EndFragment-->
+ \n\n
+ <br/>
+</p>
+","answers":[{"answerId":876881,"answerText":"
+<p>
+ 1100
+</p>
+"},{"answerId":876882,"answerText":"
+<p>
+ 1000
+</p>
+"},{"answerId":876883,"answerText":"
+<p>
+ \"25050250
+ <span &quot;helvetica="" arial,="" helvetica,="" neue&quot;,="" sans-serif;\"="" style='\"font-family:'>
+  25050250\"
+ </span>
+</p>
+"},{"answerId":876884,"answerText":"
+<p>
+ \n\n
+ <!--StartFragment-->
+ \"25050250\"
+ <!--EndFragment-->
+</p>
+"},{"answerId":876885,"answerText":"
+<p>
+ \"1100\"
+</p>
+"}],"id":623816,"globalQuestion":false},{"questionText":"
+<p>
+ In the last lesson, we introduced you to the different datatypes in Python, such as strings, integers, Boolean, etc. In this lesson, we will be learning more about the list and string datatypes. First, can you guess what variable z is equal to at the end if we are given the following code where variables x and y are both integers?
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ 1: x = 50
+</p>
+<p>
+ 2: y = 250
+</p>
+<p>
+ 3: z = 250 + x + y
+</p>
+<p>
+ 4: z = z + z
+</p>
+","answers":[{"answerId":876877,"answerText":"
+<p>
+ 550
+</p>
+"},{"answerId":876878,"answerText":"
+<p>
+ 300
+</p>
+"},{"answerId":876879,"answerText":"
+<p>
+ 500
+</p>
+"},{"answerId":876880,"answerText":"
+<p>
+ 1100
+</p>
+"}],"id":623815,"globalQuestion":false}],"pageItems":[{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283711,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":0,"optional":false,"name":"Title","value":"String Indexing","type":"TITLE","id":623819,"modified":false,"longId":623819,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283711,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":1,"optional":false,"name":"Text","value":"
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  String Indexing
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  Frequently, when working with textual elements such as strings, there arises a need to extract specific segments from the larger string. Consider the case of a string variable named \"boss\" holding the value \"Billy Bob\" as previously demonstrated. How can we isolate the last name from your boss's complete name using Python? This technique of dividing a complete string into distinct portions is referred to as string indexing.
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   The concept of string indexing naturally emerges as a means to systematically arrange and label each character within a provided string. Let's consider the illustration of \"boss = 'Billy Bob\"' as shown before. In this case, our string \"boss\" consists of characters arranged in this order: 'B', 'i', 'l', 'l', 'y', ' ', 'B', 'o', 'b' (note that even the space between the first and last name is considered a character). If the goal is to dissect the complete string \"boss\" into distinct segment, each carrying its unique identifier, we can assign a distinct integer to every character in the string. In the convention adopted by computer scientists, each character is assigned an integer that corresponds to the number of steps or characters required from the start of the string. For instance, in the string \"boss\", the character 'B' would possess the index 0, as it is located at zero positions away from the string's outset, marking it as the initial character.
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   For example, if we had a string called \"Python\", then each character inside of the string \"Python\" would have the following indexes. Remember, indexes are numerical values that represent the location of an element (character) within a group of elements (your string).
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ \n\n
+ <!--StartFragment-->
+ <img -="" alt='\"python' equals="" if="" python="" src='\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV5pK9v7sDo9T8zEvliN30q5KmsTBvTwepL89aA80KJsAxc58PLqmzFuG3RkD7gtQO0g&amp;usqp=CAU\"' string="" tutorial\"=""/>
+ <!--EndFragment-->
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  Or, for a string \"Hello\", you'd have;
+ </span>
+ <!--EndFragment-->
+</p>
+<p>
+ <!--EndFragment-->
+ <br/>
+</p>
+<p>
+ \n\n
+ <!--StartFragment-->
+ <img (updated="" -="" 2022)="" a="" alt='\"Python' codingem.com\"="" complete="" guide="" src='\"https://www.codingem.com/wp-content/uploads/2022/05/string-indexing-1024x371.png\"' strings:=""/>
+ <!--EndFragment-->
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <br/>
+</p>
+","type":"TEXT","id":623820,"modified":false,"longId":623820,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[{"frozen":false,"correct":false,"answerText":"
+<p>
+ 0
+</p>
+","pageItemId":623821,"globalAnswerId":null,"explanation":null,"id":876886,"modified":false,"longId":876886,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 4
+</p>
+","pageItemId":623821,"globalAnswerId":null,"explanation":null,"id":876887,"modified":false,"longId":876887,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 3
+</p>
+","pageItemId":623821,"globalAnswerId":null,"explanation":null,"id":876888,"modified":false,"longId":876888,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":true,"answerText":"
+<p>
+ 6
+</p>
+","pageItemId":623821,"globalAnswerId":null,"explanation":null,"id":876889,"modified":false,"longId":876889,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 7
+</p>
+","pageItemId":623821,"globalAnswerId":null,"explanation":null,"id":876890,"modified":false,"longId":876890,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 8
+</p>
+","pageItemId":623821,"globalAnswerId":null,"explanation":null,"id":876891,"modified":false,"longId":876891,"idName":"id","compositeKeys":null,"valid":true,"new":false}],"pageId":283711,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":"
+<p>
+ The index of the character can be found by counting how many positions the incorrect character is from the start of the string. Starting from the first uppercase \"P\", we can count from zero up until we reach the incorrect \"B\", which is at index 6.
+</p>
+","attrs":{},"scoreType":"SCORED","minWordLength":null,"index":2,"optional":false,"name":"Multiple Choice","value":"
+<p>
+ Let's say that a programmer was keeping track of every person's name that bought an item from their website. Suppose, for some reason, that a person's name was spelled incorrectly, say name = \"Peter Barker\" instead of name = \"Peter Parker\". What is the index of the incorrect character inside the string \"name\"?
+</p>
+","type":"MULTIPLE_CHOICE","id":623821,"modified":false,"longId":623821,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283711,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":3,"optional":false,"name":"Title","value":"How to Use String Indexing","type":"TITLE","id":623822,"modified":false,"longId":623822,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283711,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":4,"optional":false,"name":"Text","value":"
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  Using String Indexing
+ </span>
+ <!--EndFragment-->
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  Let's return to the aforementioned problem of extracting \"Bob\" from the variable boss = \"Billy Bob \". To start, let's begin by just extracting the 'B' from \"Bob\". When you want to extract an individual character from a string, you first name the string, followed by \"[]\". You would then place the index of the desired character inside the square brackets.
+ </span>
+ <!--EndFragment-->
+</p>
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  Example:
+ </span>
+ <br/>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  If I wanted to extract the second 'B' from boss, it would look like so:
+ </span>
+ <!--EndFragment-->
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  1: boss = \"Billy Bob \"
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  2: c = boss[6]
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  3: print(c)
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  When run, the above program would display B on your screen, since the second 'B' has the index 6. Since we can concatenate two strings using the \"+\" operator, we could type the following code in order to print Bob onto our screen:
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  1: boss = \"Billy Bob \"
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  2: print(boss[6] + boss[7] + boss[8])
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   Since in computer science we want to condense our code as much as possible, Python allows us to extract multiple characters from a given string at a time as follows:
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   1: boss = \"Billy Bob\"
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   2: print(boss[6 : 9])
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   Here, \"Bob\" would still be displayed on our screen; however, the volume of code required is significantly reduced compared to the previous method. When we need to retrieve multiple characters from a given string, the familiar approach of naming the string followed by the square brackets remains unchanged. Instead of directly inputting the index of the desired character, a slight modification is applied. You begin by indicating the index from which the extraction should initiate-this index is included in the extraction. Following that, you specify the index of the character where the string's extraction concludes-this index is excluded. Essentially, the character located at the starting index will be included in the extraction, while the character at the final index will not be encompassed.
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+","type":"TEXT","id":623823,"modified":false,"longId":623823,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[{"frozen":false,"correct":false,"answerText":"
+<p>
+ 26
+</p>
+","pageItemId":623824,"globalAnswerId":null,"explanation":null,"id":876892,"modified":false,"longId":876892,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 25
+</p>
+","pageItemId":623824,"globalAnswerId":null,"explanation":null,"id":876893,"modified":false,"longId":876893,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":true,"answerText":"
+<p>
+ 24
+</p>
+","pageItemId":623824,"globalAnswerId":null,"explanation":null,"id":876894,"modified":false,"longId":876894,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 23
+</p>
+","pageItemId":623824,"globalAnswerId":null,"explanation":null,"id":876895,"modified":false,"longId":876895,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ 22
+</p>
+","pageItemId":623824,"globalAnswerId":null,"explanation":null,"id":876896,"modified":false,"longId":876896,"idName":"id","compositeKeys":null,"valid":true,"new":false}],"pageId":283711,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":"
+<p>
+ The index of a character represents how many positions it is away from the start of the string. Since we start at index zero for our first character, and count our way up sequentially, then we know that the index of the last character in the string would be 25. Thus, the second to last character would have index 24. If you are still confused, try writing out a 26 character word or string of your own and then try labelling each character's index!
+</p>
+","attrs":{},"scoreType":"SCORED","minWordLength":null,"index":5,"optional":false,"name":"Multiple Choice","value":"
+<p>
+ len() is a function given in Python that can take in a string and return the number of characters in the given string. For example, if we said
+</p>
+<p>
+ that x = len(\"Hello\"), then x would be equal to five, since \"Hello\" is five characters long. As practice, lets suppose that you have a string variable called \"letters\", and you know that len(letters) is equal to 26. Then, what would the index of the second to last character in \"letters\" be?
+</p>
+","type":"MULTIPLE_CHOICE","id":623824,"modified":false,"longId":623824,"idName":"id","compositeKeys":null,"valid":true,"new":false}]}

@@ -1,0 +1,199 @@
+{"preconditionCandidates":[{"questionText":"
+<p>
+ We also discussed what lists are during our last session. As a review, what would the index of the the number seven be in the list below?
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ 1: l = [6, 6, 5, 7, 1, 2, 3]
+</p>
+<p>
+ 2:
+</p>
+<p>
+ 3:
+</p>
+<p>
+ ...
+</p>
+","answers":[{"answerId":876909,"answerText":"
+<p>
+ 0
+</p>
+"},{"answerId":876910,"answerText":"
+<p>
+ 1
+</p>
+"},{"answerId":876911,"answerText":"
+<p>
+ 2
+</p>
+"},{"answerId":876912,"answerText":"
+<p>
+ 3
+</p>
+"},{"answerId":876913,"answerText":"
+<p>
+ 4
+</p>
+"},{"answerId":876914,"answerText":"
+<p>
+ 5
+</p>
+"}],"id":623839,"globalQuestion":false},{"questionText":"
+<p>
+ During last session, we discussed the string datatype, a type of data in Python used to store textual data. As review, what print to our screen if we ran the following program?
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ 1: s = \"What's up?\"
+</p>
+<p>
+ 2: s = s + s
+</p>
+<p>
+ 3: print(s[0 : 9])
+</p>
+<p>
+ ...
+</p>
+","answers":[{"answerId":876905,"answerText":"
+<p>
+ \"What's up?\"
+</p>
+"},{"answerId":876906,"answerText":"
+<p>
+ \"What's up? What's up?\"
+</p>
+"},{"answerId":876907,"answerText":"
+<p>
+ \"What's\"
+</p>
+"},{"answerId":876908,"answerText":"
+<p>
+ \"up\"
+</p>
+"}],"id":623838,"globalQuestion":false},{"questionText":"
+<p>
+ Which of the following would run an error? For this class, we assume that any shown code that isn't typed as we have instructed should run an error, since this means they would break the syntax, or grammar, of our programming language Python.
+</p>
+","answers":[{"answerId":876915,"answerText":"
+<p>
+ list = [[1,2], [3,4]]
+</p>
+"},{"answerId":876916,"answerText":"
+<p>
+ list = [\"hello\" , 7]
+</p>
+"},{"answerId":876917,"answerText":"
+<p>
+ list = [ [ [1, 2], [3, 4]], \"hello\"]
+</p>
+"},{"answerId":876918,"answerText":"
+<p>
+ None of the above
+</p>
+"}],"id":623842,"globalQuestion":false}],"pageItems":[{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283721,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":0,"optional":false,"name":"Title","value":"What are Tuples?","type":"TITLE","id":623853,"modified":false,"longId":623853,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283721,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":1,"optional":false,"name":"Text","value":"
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  Tuples
+ </span>
+ <!--EndFragment-->
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   Up to this point, you've explored the datatypes of strings, lists, and dictionaries. These datatypes collectively store collections of data and possess the capability to be modified after their creation. For instance, adjusting an element within a list or string is straightforward by referencing the index that needs editing, while the manipulation of a key-value pair in a dictionary is accomplished by a specific key.
+  </span>
+ </font>
+ <br/>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   But what if we wanted to create a datatype that can store large amounts of data that is unchangeable, meaning that once we store it we cannot change it later on? The answer is
+  </span>
+ </font>
+ <span &quot;space="" 128);="" 20px;="" 56,="" 700;="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" pre;\"="" rgb(242,="" style='\"color:' white-space:="">
+  Tuples
+ </span>
+ <span &quot;space="" 20px;="" font-family:="" mono&quot;,="" monospace;\"="" preserve;="" style='\"font-size:' white-space-collapse:="">
+  !
+ </span>
+</p>
+<p>
+ \n\n
+ <!--StartFragment-->
+ <img alt='\"Tuples' codingal\"="" in="" python="" src='\"https://www.codingal.com/resources/wp-content/uploads/2023/01/Tuples-in-Python.png\"' |=""/>
+ <!--EndFragment-->
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   Tuples are a data structure designed to store ordered collection of items. Unlike lists, tuples are
+  </span>
+ </font>
+ <span &quot;space="" 128);="" 20px;="" 56,="" 700;="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" pre;\"="" rgb(242,="" style='\"color:' white-space:="">
+  immutable
+ </span>
+ <span &quot;space="" 20px;="" font-family:="" mono&quot;,="" monospace;\"="" preserve;="" style='\"font-size:' white-space-collapse:="">
+  , meaning their elements cannot be changed once their defined. This property makes tuples particularly useful where data integrity are crucial. Tuples are created by enclosing comma separated values within parenthesis. Just like before, we use indices in order to call upon specific elements inside a tuple just like in lists or strings!
+ </span>
+</p>
+<p>
+ <font face='\"Space' mono,="" monospace\"="">
+  <span 20px;="" preserve;\"="" style='\"font-size:' white-space-collapse:="">
+   <br/>
+  </span>
+ </font>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ \n\n
+ <!--StartFragment-->
+ <br/>
+</p>
+<p>
+ \n\n
+ <!--StartFragment-->
+ <br class='\"Apple-interchange-newline\"'/>
+ <br/>
+ <!--EndFragment-->
+</p>
+<p>
+ <span &quot;apple="" &quot;helvetica="" &quot;noto="" &quot;segoe="" -apple-system,="" 16px;="" 247,="" 248);\"="" 65,="" 81);="" arial,="" background-color:="" cantarell,="" color="" emoji&quot;,="" emoji&quot;;="" font-family:="" font-size:="" neue&quot;,="" preserve;="" rgb(247,="" rgb(55,="" roboto,="" sans&quot;,="" sans-serif,="" style='\"color:' symbol&quot;,="" system-ui,="" söhne,="" ubuntu,="" ui="" ui&quot;,="" ui-sans-serif,="" white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <span &quot;apple="" &quot;helvetica="" &quot;noto="" &quot;segoe="" -apple-system,="" 16px;="" 247,="" 248);\"="" 65,="" 81);="" arial,="" background-color:="" cantarell,="" color="" emoji&quot;,="" emoji&quot;;="" font-family:="" font-size:="" neue&quot;,="" preserve;="" rgb(247,="" rgb(55,="" roboto,="" sans&quot;,="" sans-serif,="" style='\"color:' symbol&quot;,="" system-ui,="" söhne,="" ubuntu,="" ui="" ui&quot;,="" ui-sans-serif,="" white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p>
+ <br/>
+ <!--EndFragment-->
+</p>
+","type":"TEXT","id":623854,"modified":false,"longId":623854,"idName":"id","compositeKeys":null,"valid":true,"new":false}]}
