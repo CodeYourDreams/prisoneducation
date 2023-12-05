@@ -1,0 +1,29 @@
+lesson_name,lesson_description
+ Lesson 1: Introduction to Web Development and Python,"In this class, we'll dive into the basics of making websites and using Python, a computer language. We'll show you what it's all about, why it's important, and how Python can help. If you've ever thought about creating your own websites or apps, this is the perfect starting point!"
+Lesson 2: Variables and Datatypes,"In this lesson, we will be reviewing Python datatypes, and discussing what variables are."
+Lesson 3: Strings and Lists,"With a grasp of variables and datatypes under our belts, let's delve into the world of two fresh datatypes: strings and lists! First up, we'll explore strings—a fundamental Python datatype tailored for holding text-based information. Following that, we'll introduce lists—a versatile abstract datatype enabling the storage of copious amounts of data, irrespective of its type."
+"Lesson 4: Lists, Tuples, Dictionaries","In this lesson you'll delve into two new Python datatypes: tuples and dictionaries. Following your exploration of Lists, this session will unveil various methods to effectively structure extensive data sets, particularly data you might encounter during the process of web development."
+Lesson 5: Conditionals,asdf
+Lesson 6: Loops,asdf
+Lesson 7: Functions,asdf
+Lesson 8: HTML,asdf
+Lesson 9: CSS,"asdf
+"
+Lesson 10: Advanced HTML and CSS,asdf
+Lesson 11: Internet 101,"In this lesson, you will learn the MVC model and be able to visualize it on a map. You will also understand how the internet functions and websites get information.
+"
+Lesson 12: Flask,"In this lesson, you will learn about Flask and how to use it, including basic routing. You will also learn how Flask relates to MVC
+"
+Lesson 13: Advanced Flask,"In this lesson, you will learn how to link in Flask to a project. You will also learn how to implement dynamic routing.
+"
+Lesson 14: Flask Forms,"In this lesson, you will be tackling more ways you can use flask, especially with forms. You will also view what the process of coding a login page looks like.
+"
+Lesson 15: Databases pt. 1,"In this lesson, you will learn Python Object Oriented Programming and how to implement classes. You will also be introduced to databases and its main components.
+"
+Lesson 16: Databases pt.2,"In this lesson, you will learn how to use SQLAlchemy. You will also learn the CRUD principle.
+"
+Lesson 17: APIs,"In this lesson, you will learn what an API is and how to implement one. You will also learn what JSON is and why it is relevant to APIs.
+"
+Lesson 18: User Testing,"In this lesson, you will learn about user testing and strategies for gathering insights on UI and app functionality design."
+Lesson 19: Marketing/Branding,"In this lesson, you will understand the basics of branding when it comes to creating an application/business. You will also create a logo, understand themes, and how to encourage others to use their apps. You will learn how to utilize a messaging framework to market their projects.
+"

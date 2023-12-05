@@ -1,0 +1,61 @@
+page_lesson,page_name,page_id,page_number
+Lesson 1,Welcome to Web Development!,283705,Page 1
+Lesson 1,The Future of Web Development,283706,Page 2
+Lesson 1,What is Python?,283707,Page 3
+Lesson 1,Course Goals,283708,Page 4
+Lesson 2,Lesson 11 - Variables and Datatypes,283703,Page 1
+Lesson 2,Knowledge Check,283704,Page 2
+Lesson 3,Warmup!,283709,Page 1
+Lesson 3,What is a String?,283710,Page 2
+Lesson 3,String Indexing,283711,Page 3
+Lesson 3,Strings Continued,283712,Page 4
+Lesson 3,Terms to Know,283713,Page 5
+Lesson 3,What is a List?,283714,Page 6
+Lesson 3,Terms to Know,283715,Page 7
+Lesson 4,Warmup!,283716,Page 1
+Lesson 4,Lists Continued,283717,Page 2
+Lesson 4,What are Dictionaries?,283718,Page 3
+Lesson 4,Dictionaries Continued,283719,Page 4
+Lesson 4,Terms to Know,283720,Page 5
+Lesson 4,What are Tuples?,283721,Page 6
+Lesson 4,Tuples Continued,283722,Page 7
+Lesson 4,Terms to Know,283723,Page 8
+Lesson 4,Takeaways,283724,Page 9
+Lesson 5,Warmup!,283725,Page 1
+Lesson 5,What are Conditionals?,283726,Page 2
+Lesson 5,Conditionals Continued,283727,Page 3
+Lesson 11,Lesson #11: Internet 101,283668,Page 1
+Lesson 11,Knowledge Check,283669,Page 2
+Lesson 11,MVC: Model-View-Controller,283670,Page 3
+Lesson 11,Knowledge Check,283671,Page 4
+Lesson 11,What is the Internet?,283672,Page 5
+Lesson 12,Lesson #12: Flask,283673,Page 1
+Lesson 12,How to use Flask,283674,Page 2
+Lesson 12,Knowledge Check,283675,Page 3
+Lesson 12,Flask Routing,283676,Page 4
+Lesson 12,Knowledge Check,283677,Page 5
+Lesson 13,Lesson #13: Advanced Flask,283678,Page 1
+Lesson 13,Advanced Flask,283679,Page 2
+Lesson 13,Knowledge Check,283680,Page 3
+Lesson 14,Lesson #14: Flask Forms,283681,Page 1
+Lesson 14,HTTP Methods,283682,Page 2
+Lesson 14,Forms in HTML,283683,Page 3
+Lesson 14,Knowledge Check,283684,Page 4
+Lesson 15,Lesson #15: Databases pt. 1,283685,Page 1
+Lesson 15,Object Oriented Programming (OOP),283686,Page 2
+Lesson 15,How do we use OOP?,283687,Page 3
+Lesson 15,Knowledge Check,283688,Page 4
+Lesson 15,Databases,283689,Page 5
+Lesson 16,Lesson #16: Databases pt.2,283690,Page 1
+Lesson 16,SQLAlchemy,283691,Page 2
+Lesson 16,Database Reads,283692,Page 3
+Lesson 16,Knowledge Check,283693,Page 4
+Lesson 17,Lesson #17: APIs,283694,Page 1
+Lesson 17,JSON (JavaScript Object Notation),283695,Page 2
+Lesson 17,HTTP Requests,283696,Page 3
+Lesson 17,Knowledge Check,283697,Page 4
+Lesson 18,Lesson #18: User Testing,283698,Page 1
+Lesson 18,Interactive Practice,283699,Page 2
+Lesson 18,Knowledge Check,283700,Page 3
+Lesson 19,Lesson #19: Marketing/Branding,283701,Page 1
+Lesson 19,Knowledge Check,283702,Page 2
