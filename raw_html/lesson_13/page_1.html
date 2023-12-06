@@ -1,24 +1,108 @@
-<html>
- <head>
-  <title>
-   503 Service Temporarily Unavailable
-  </title>
- </head>
- <body>
-  <center>
-   <h1>
-    503 Service Temporarily Unavailable
-   </h1>
-  </center>
-  <hr/>
-  <center>
-   nginx
-  </center>
- </body>
-</html>
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
+{"preconditionCandidates":[],"pageItems":[{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283678,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":0,"name":"Title","value":"Lesson #13: Advanced Flask","type":"TITLE","id":623671,"modified":false,"longId":623671,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":{"frozen":false,"contentPath":"/media/430/9646/e9f57c3b-fc09-4f05-b6ee-1ca2d0b8e225-Screenshot_2023-07-31_at_6.24.52_PM.png","wordCount":null,"pageCount":null,"partialPath":"/430/9646/e9f57c3b-fc09-4f05-b6ee-1ca2d0b8e225-Screenshot_2023-07-31_at_6.24.52_PM.png","video":false,"audio":false,"timeLength":null,"pdf":false,"image":false,"parentId":623672,"mediaPath":"/media/430/9646/e9f57c3b-fc09-4f05-b6ee-1ca2d0b8e225-Screenshot_2023-07-31_at_6.24.52_PM.png","fileType":"image","type":"","fileName":"Screenshot_2023-07-31_at_6.24.52_PM.png","extension":"24.52_pm.png","description":null,"longId":279653,"transcribedClosedCaption":{"present":false},"id":279653,"modified":false,"idName":"id","compositeKeys":null,"valid":true,"new":false},"pageItemAttributes":null,"answers":[],"pageId":283678,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":1,"name":"Image","value":null,"type":"IMAGE","id":623672,"modified":false,"longId":623672,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[{"frozen":false,"correct":false,"answerText":"
+<p>
+ app = Flask(__name__)
+</p>
+","pageItemId":623673,"globalAnswerId":null,"explanation":null,"id":876793,"modified":false,"longId":876793,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ @app.route('/')
+</p>
+","pageItemId":623673,"globalAnswerId":null,"explanation":null,"id":876794,"modified":false,"longId":876794,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":true,"answerText":"
+<p>
+ return render_template('home.html')
+</p>
+","pageItemId":623673,"globalAnswerId":null,"explanation":null,"id":876795,"modified":false,"longId":876795,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"correct":false,"answerText":"
+<p>
+ app.run(debug = True)
+</p>
+","pageItemId":623673,"globalAnswerId":null,"explanation":null,"id":876796,"modified":false,"longId":876796,"idName":"id","compositeKeys":null,"valid":true,"new":false}],"pageId":283678,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":"
+<p>
+ If you replace 'home.html' with another file, say 'index.html', the contents of that file will be rendered instead.
+</p>
+","attrs":{},"scoreType":"SCORED","minWordLength":null,"index":2,"name":"Multiple Choice","value":"
+<p>
+ Quick Review: In the above code, which line would you change to change what loads on the website's initial page?
+</p>
+<p>
+ <br/>
+</p>
+","type":"MULTIPLE_CHOICE","id":623673,"modified":false,"longId":623673,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283678,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":3,"name":"Title","value":"Linking Stuff with Flask","type":"TITLE","id":623674,"modified":false,"longId":623674,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283678,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":4,"name":"Text","value":"
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-df2dab83-7fff-4289-d522-7a72450100d7\"'>
+  <span &quot;space="" 145,="" 18pt;="" 234);="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   Linking stuff with Flask:
+  </span>
+  <span &quot;space="" 128);="" 18pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(242,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   CSS
+  </span>
+ </span>
+</p>
+<p>
+ In Flask, you have a part where you write the words and set up the pictures - HTML. It's like the \"skeleton\" of your website. But for colors and designs, you use a different file, which in our case would be a CSS file like 'style.css'. You use little bits of code inside double curly brackets {{ }} to indicate that you're embedding python code in the HTML file to apply the styles from style.css.
+</p>
+<p>
+ <span &quot;helvetica="" arial,="" helvetica,="" neue&quot;,="" sans-serif;\"="" style='\"font-family:'>
+  {{ url_for(...) }} is a Flask template variable that generates the correct URL for the static resources. The 'static' argument in url_for() refers to the \"static\" folder in your Flask project where you typically store static assets like CSS, images, and JavaScript files.
+ </span>
+</p>
+<p>
+ <span &quot;helvetica="" arial,="" helvetica,="" neue&quot;,="" sans-serif;\"="" style='\"font-family:'>
+  static/style.css: This is the CSS file that you're linking to your HTML template.
+ </span>
+ <br/>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-df2dab83-7fff-4289-d522-7a72450100d7\"'>
+  <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:304px;\"'>
+    <img height='\"304\"' src='\"https://lh3.googleusercontent.com/YmM9-EVHQqLg2gFj6YdN3akuIAvS8zHa8hpdOcVNV9DFTwGECZmnw1VwOAdVpT9bEgR43WUvKsQzCdUqk_fXrxqqVnjbxtrsPF_AbYw3l4xsrxqSotaAd1YvA9ZznYHKYCUBV5e6Ui3zTEpNuBBSe1w\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span>
+  <span &quot;space="" 145,="" 18pt;="" 234);="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <br/>
+  </span>
+ </span>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-df2dab83-7fff-4289-d522-7a72450100d7\"'>
+  <span &quot;space="" 145,="" 18pt;="" 234);="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   Linking stuff with Flask:
+  </span>
+  <span &quot;space="" 128);="" 18pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(242,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   Nav Bar
+  </span>
+ </span>
+</p>
+<p>
+ Imagine you're building a website using Flask, which is like a special tool to make websites. And you want to have a cool navigation bar at the top of your web pages. This navigation bar helps people easily move around your website, like clicking buttons to go to different pages.
+</p>
+<p>
+ You have your main.py file, which is the main controller of the website. Then, on both the home.html and about.html pages, y
+ <span &quot;helvetica="" arial,="" helvetica,="" neue&quot;,="" sans-serif;\"="" style='\"font-family:'>
+  ou have a special part called \"nav-bar\". This is where your navigation buttons will be.\nYou use {{url_for('home_fn')}} to create a link back to the home page. It's like making a signpost that says \"Go back home\".\nSimilarly, you use {{url_for('about_fn')}} to create a link to the about page.
+ </span>
+</p>
+<p>
+ <span &quot;helvetica="" arial,="" helvetica,="" neue&quot;,="" sans-serif;\"="" style='\"font-family:'>
+  So, when someone goes to your website's home page or the about page, they see a nice navigation bar at the top. This helps them easily move between different parts of your website. It's like having signposts to guide them, and Flask helps you set up these signposts to make your website user-friendly!
+ </span>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-df2dab83-7fff-4289-d522-7a72450100d7\"'>
+  <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:619px;height:296px;\"'>
+    <img height='\"296\"' src='\"https://lh5.googleusercontent.com/7OWZs8KWsQZ8dxvYyZQxPgbGlri81IjxfaTYD3t3i6FLmbNmrL2e63znHBCWy-KaCSzxBMciWQa4bB9A_fIxLlyPDDSL3pvUzAgogm6b97V7ZcOaxLFsWkHi5ux4bGGoZRYPMWckaOmTfzMGjCweqc0\"' style='\"margin-left:-5px;margin-top:0px;\"' width='\"624.0000000000001\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<p 0pt;="" 0pt;\"="" 1.2;="" dir='\"ltr\"' margin-bottom:="" margin-top:="" style='\"line-height:'>
+ <br class='\"Apple-interchange-newline\"'/>
+</p>
+<p>
+ <br/>
+</p>
+","type":"TEXT","id":623675,"modified":false,"longId":623675,"idName":"id","compositeKeys":null,"valid":true,"new":false}]}

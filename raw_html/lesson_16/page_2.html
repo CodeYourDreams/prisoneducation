@@ -1,24 +1,477 @@
-<html>
- <head>
-  <title>
-   503 Service Temporarily Unavailable
-  </title>
- </head>
- <body>
-  <center>
-   <h1>
-    503 Service Temporarily Unavailable
-   </h1>
-  </center>
-  <hr/>
-  <center>
-   nginx
-  </center>
- </body>
-</html>
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
+{"preconditionCandidates":[],"pageItems":[{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283691,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":0,"name":"Title","value":"SQLAlchemy","type":"TITLE","id":623735,"modified":false,"longId":623735,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":{"frozen":false,"contentPath":"/media/430/9646/8b8ea94b-c616-4ef0-b58a-409bd51ae7e6-Screenshot_2023-07-24_at_3.38.46_PM.png","wordCount":null,"pageCount":null,"partialPath":"/430/9646/8b8ea94b-c616-4ef0-b58a-409bd51ae7e6-Screenshot_2023-07-24_at_3.38.46_PM.png","video":false,"audio":false,"timeLength":null,"pdf":false,"image":false,"parentId":623736,"mediaPath":"/media/430/9646/8b8ea94b-c616-4ef0-b58a-409bd51ae7e6-Screenshot_2023-07-24_at_3.38.46_PM.png","fileType":"image","type":"","fileName":"Screenshot_2023-07-24_at_3.38.46_PM.png","extension":"38.46_pm.png","description":null,"longId":279655,"transcribedClosedCaption":{"present":false},"id":279655,"modified":false,"idName":"id","compositeKeys":null,"valid":true,"new":false},"pageItemAttributes":null,"answers":[],"pageId":283691,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":1,"name":"Image","value":null,"type":"IMAGE","id":623736,"modified":false,"longId":623736,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283691,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":2,"name":"Text","value":"
+<p>
+ <span &quot;space="" 15pt;="" font-family:="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"background-color:' transparent;="" white-space-collapse:="">
+  So far, we've just learned how to grab user information with forms on Flask, but we don't know how to store that information long term.
+ </span>
+</p>
+<p>
+ <span &quot;space="" 15pt;="" font-family:="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"background-color:' transparent;="" white-space-collapse:="">
+  In this lesson, we will store learn how to store user-inputted information by linking our Flask Applications to a database.
+ </span>
+ <span &quot;space="" 15pt;="" font-family:="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"background-color:' transparent;="" white-space-collapse:="">
+  We will do this with SQL, structured query language, which will allow you to store data in a format similar to a large Excel sheet.
+ </span>
+</p>
+<p>
+ <span &quot;space="" 15pt;="" font-family:="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"background-color:' transparent;="" white-space-collapse:="">
+  In a lot of cases, it would be beneficial to learn SQL syntax and statements to work with SQL databases, but we can use libraries that allow us to just use Python code, so that we don't have to learn a whole new language.
+ </span>
+</p>
+<p>
+ <span &quot;space="" 15pt;="" font-family:="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"background-color:' transparent;="" white-space-collapse:="">
+  We will use an ORM, object rotational mapper, which can directly use python instead of SQL syntax to do anything we might need, such as create or updating from our database.
+ </span>
+ <span &quot;space="" 15pt;="" font-family:="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"background-color:' transparent;="" white-space-collapse:="">
+  The most common ORM for python is SQLAlchemy, which translates Python classes to tables and is one way to interact with a database
+ </span>
+</p>
+","type":"TEXT","id":623737,"modified":false,"longId":623737,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283691,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":3,"name":"Title","value":"How do we make a table?","type":"TITLE","id":623738,"modified":false,"longId":623738,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283691,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":4,"name":"Text","value":"
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  We know already how to make a table in pure Python, so now lets look at how we would do it using SQLAlchemy.
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  <br/>
+ </span>
+</p>
+<p center;\"="" style='\"text-align:'>
+ <span &quot;space="" 163);="" 24px;="" 700;="" 83,="" font-family:="" font-size:="" font-weight:="" mono&quot;,="" monospace;="" preserve;\"="" rgb(0,="" style='\"color:' white-space-collapse:="">
+  Breaking down SQLAlchemy
+ </span>
+ <img &quot;space="" 0px;="" 0px;\"="" 15pt;="" font-family:="" font-size:="" height='\"252\"' margin-left:="" margin-top:="" mono&quot;,="" monospace;="" preserve;="" src='\"https://lh5.googleusercontent.com/TSX9THoLSgQY9y5OzfM_RDDtEWWtvqvsl5foVZkabp7YYcVtldnqjLrLkwjW9ctWva6Yn3HFL-_Xh6RM5KwzQzBC1oVRl-WoNWYEDChIzws0qrCX42EE6gL_Pz21yBAwFen0gzZLZgD3HUgAkkAOHMo\"' style='\"background-color:' transparent;="" white-space-collapse:="" width='\"624\"'/>
+</p>
+<ul>
+ <li 15pt;="" 34);="" 34,="" aria-level='\"1\"' arial,="" background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" pre;\"="" rgb(34,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p>
+   <span &quot;space="" 15pt;="" background-color:="" baseline;\"="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;="">
+    Before creating a table in SQLAlchemy, you must create a
+   </span>
+   <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;\"="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;="">
+    Base
+   </span>
+  </p>
+ </li>
+ <li 15pt;="" 34);="" 34,="" aria-level='\"1\"' arial,="" background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" pre;\"="" rgb(34,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-99c8c9e7-7fff-af89-874a-f24088b6af18\"'>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     declarative_base()
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     is a function that creates a base for you!
+    </span>
+   </span>
+  </p>
+ </li>
+ <ul 48px;\"="" style='\"padding-inline-start:'>
+  <li &quot;space="" 15pt;="" 34);="" 34,="" aria-level='\"2\"' background-color:="" baseline;="" circle;="" color:="" dir='\"ltr\"' font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(34,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+   <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+    <span id='\"docs-internal-guid-99c8c9e7-7fff-af89-874a-f24088b6af18\"'>
+     <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+      Bases make it easy to create columns in your table
+     </span>
+    </span>
+   </p>
+  </li>
+ </ul>
+</ul>
+<ul 0px;="" 48px;\"="" padding-inline-start:="" style='\"margin-bottom:'>
+ <li 15pt;="" 34);="" 34,="" aria-level='\"1\"' arial,="" background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" pre;\"="" rgb(34,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p 0pt;="" 1.2;\"="" dir='\"ltr\"' line-height:="" margin-bottom:="" role='\"presentation\"' style='\"margin-top:'>
+   <span &quot;space="" 15pt;="" baseline;\"="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"background-color:' transparent;="" vertical-align:="">
+    Your class will inherit from the base that
+   </span>
+   <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" baseline;\"="" color:="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"background-color:' transparent;="" vertical-align:="">
+    declarative_base()
+   </span>
+   <span &quot;space="" 128);="" 15pt;="" 56,="" baseline;\"="" color:="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"background-color:' transparent;="" vertical-align:="">
+   </span>
+   <span &quot;space="" 15pt;="" baseline;\"="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"background-color:' transparent;="" vertical-align:="">
+    returns
+   </span>
+  </p>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-e63865ea-7fff-6c3f-9ea2-f3a3355a6aa8\"'>
+  <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:264px;\"'>
+    <img height='\"264\"' src='\"https://lh6.googleusercontent.com/58QFeGUJkJ8_phf4ssvFIKhPGYGbG-TO3PXye-GRLQtnfmy0KlMB07GY6U4j81L9HzGKuGh_DQSYy3P0GyUGB_WaG_MxHUm09uLbPpRiA07SAu7DMQ0MA6EeR-isveHyCJ2ciWPbJPxZkK0lNEwEmtQ\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<ul 0px;="" 48px;\"="" padding-inline-start:="" style='\"margin-bottom:'>
+ <li &quot;proxima="" 15pt;="" 66);="" 66,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" nova&quot;,="" pre;\"="" rgb(66,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-e63865ea-7fff-6c3f-9ea2-f3a3355a6aa8\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     The next step is to
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     give your table a name
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     !
+    </span>
+   </span>
+  </p>
+ </li>
+ <ul 48px;\"="" style='\"padding-inline-start:'>
+  <li &quot;space="" 15pt;="" 66);="" 66,="" aria-level='\"2\"' background-color:="" baseline;="" circle;="" color:="" dir='\"ltr\"' font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(66,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+   <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+    <span id='\"docs-internal-guid-e63865ea-7fff-6c3f-9ea2-f3a3355a6aa8\"'>
+     <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+      Make sure to name your table something descriptive and memorable.
+     </span>
+    </span>
+   </p>
+  </li>
+ </ul>
+</ul>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-944e0105-7fff-ccb5-bc07-63571f5aff71\"'>
+  <span &quot;space="" 15pt;="" 34);="" 34,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(34,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:255px;\"'>
+    <img height='\"255\"' src='\"https://lh3.googleusercontent.com/-gERmpCV6G8oCJukJXYbqE0UDJsUC7i28NBp1wnBtBuyN7AwooQzXJUo6HiEWlV9M4jz_aef0Sl_pEyvg6WfrxdY48gY1bdWTNK4L4s33GKLlerRZiDZA1sGcE5G6qo5AVY6hBadpV0C4SAf5RZdsoE\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<ul 0px;="" 48px;\"="" padding-inline-start:="" style='\"margin-bottom:'>
+ <li &quot;proxima="" 15pt;="" 66);="" 66,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" nova&quot;,="" pre;\"="" rgb(66,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-944e0105-7fff-ccb5-bc07-63571f5aff71\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     Then, we can
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     define the columns
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     in our table
+    </span>
+   </span>
+  </p>
+ </li>
+ <ul 48px;\"="" style='\"padding-inline-start:'>
+  <li &quot;space="" 15pt;="" 66);="" 66,="" aria-level='\"2\"' background-color:="" baseline;="" circle;="" color:="" dir='\"ltr\"' font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(66,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+   <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+    <span id='\"docs-internal-guid-944e0105-7fff-ccb5-bc07-63571f5aff71\"'>
+     <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+      These correspond to the attributes in our class
+     </span>
+    </span>
+   </p>
+  </li>
+ </ul>
+ <li 15pt;="" 66);="" 66,="" aria-level='\"1\"' arial,="" background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" pre;\"="" rgb(66,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-944e0105-7fff-ccb5-bc07-63571f5aff71\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     One column
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     must
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     have
+    </span>
+    <span &quot;space="" 145,="" 15pt;="" 234);="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(0,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     primary_key
+    </span>
+    <span &quot;space="" 15pt;="" 700;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     =
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     True
+    </span>
+   </span>
+  </p>
+ </li>
+ <li &quot;space="" 15pt;="" 66);="" 66,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(66,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-944e0105-7fff-ccb5-bc07-63571f5aff71\"'>
+    <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     Pick the variable names for these columns carefully - they become your column headers!
+    </span>
+   </span>
+  </p>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p center;\"="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-135ec6e1-7fff-5fd5-0c0f-c938f8b7c8a1\"'>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:357px;\"'>
+    <img height='\"357\"' src='\"https://lh6.googleusercontent.com/Aed6TatypTt7VR6g1F-8t6y7gYdlDQ8FUqnZQ214-XYvcXv3KYWCdsjjn7Qspritj5nnoOaexb_vuQ1gryHud4xJviu3GCgPpa912fRC4gOpU9ZguBcaNAoj_tG1Fv1HYqEMjT33-E1IF45QyP6-jdo\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<p>
+ <span &quot;space="" 20px;="" font-size:="" mono&quot;,="" monospace;="" preserve;\"="" style='\"font-family:' white-space-collapse:="">
+  Looking back at our MVC map, we have just created our model! Using python OOP and SQLAlchemy!
+ </span>
+</p>
+<p>
+ <br/>
+</p>
+","type":"TEXT","id":623739,"modified":false,"longId":623739,"idName":"id","compositeKeys":null,"valid":true,"new":false},{"frozen":false,"optional":false,"userFile":null,"pageItemAttributes":null,"answers":[],"pageId":283691,"isScored":null,"pageItemPrecondition":[],"formulas":[],"explanation":null,"attrs":{},"scoreType":"NOT_SCORED","minWordLength":null,"index":5,"name":"Text","value":"
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   File Structure
+  </span>
+ </span>
+</p>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 34);="" 34,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(34,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:264px;\"'>
+    <img height='\"264\"' src='\"https://lh4.googleusercontent.com/I55TdgEPHrnXYsHyLZ4BYG-bJsAmuLVbdAZZclnt1D8bgF7F6TXuLrCYDkQEUxPzD9ZX8tmhTLcnvkiQ9_6THKregPwMlSoXQA24CSoc_kiabqhhDkwxeUIv3XoefzCqEIPRbpTObeCUdov6eY83K6Q\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <br/>
+  </span>
+ </span>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   What does database.py do?
+  </span>
+ </span>
+</p>
+<p dir='\"ltr\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   - Here’s how
+  </span>
+  <span &quot;space="" 15pt;="" 700;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   database.py
+  </span>
+  <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   ’s start looks like!
+  </span>
+ </span>
+</p>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 34);="" 34,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(34,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:275px;\"'>
+    <img height='\"275\"' src='\"https://lh6.googleusercontent.com/H2dZoDZjeoI2En7fkS0SJgZtXERQpXUqzq0OaWu8SpLkVgqlWWW_w2qzI8wNzSDMoSjoNnyzopV9MFg1lDQz3sth0br_3FRgtitU1uFq_a07u_WVnH4XcewLlGRfXnKkiPbsWmw-QYcwTSIBjrwUDQ8\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<p dir='\"ltr\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(242,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   We always start the same way!
+  </span>
+ </span>
+</p>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 34);="" 34,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(34,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:189px;\"'>
+    <img height='\"189\"' src='\"https://lh6.googleusercontent.com/w3ja8mkwTpselD8vBhNtRjGv0A_hvg5A0UB7eXjYh-kUOykti3UQ-rR0yDZxFtrJ5o7Fc-hWyIMBpOI5Os0U9MaMLs282xxbkNLJapqUuYY8-VCrJ1nQeXgakFH6VBi2rjIGsQQjpkgT37cBonOGJAY\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<ul 0px;="" 48px;\"="" padding-inline-start:="" style='\"margin-bottom:'>
+ <li 15pt;="" aria-level='\"1\"' arial,="" background-color:="" baseline;="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" pre;\"="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     We need to import
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     Base
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     and
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     User
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     from
+    </span>
+    <span &quot;space="" 145,="" 15pt;="" 234);="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(0,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     model.py
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     , to
+    </span>
+    <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(0,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     get the table structure
+    </span>
+    <span &quot;space="" 15pt;="" 163);="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" rgb(0,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     !
+    </span>
+   </span>
+  </p>
+ </li>
+ <li 15pt;="" aria-level='\"1\"' arial,="" background-color:="" baseline;="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" pre;\"="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     Replace
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     User
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     with whatever class you are using!
+    </span>
+   </span>
+  </p>
+ </li>
+</ul>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 34);="" 34,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(34,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:257px;\"'>
+    <img height='\"257\"' src='\"https://lh3.googleusercontent.com/FAZ6-R3JO0JLahDtPdtz4Mmwy0AK3xxjRhYJXAZSw5XAfLRfBbL9RzlaQeFbxVf6qWMHE5EYWev2arOc2qcZCjJpn3kt2aibh0fRTnXLd-XdRKcxtZ_cjOKr8s-yONnGeooUATxz1K3bNcPDhYZCTww\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<ul 0px;="" 48px;\"="" padding-inline-start:="" style='\"margin-bottom:'>
+ <li &quot;space="" 15pt;="" 34);="" 34,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(34,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     The rest is just SQLAlchemy magic! - it establishes all conversations with the database
+    </span>
+   </span>
+  </p>
+ </li>
+ <li &quot;proxima="" 15pt;="" 34);="" 34,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" nova&quot;,="" pre;\"="" rgb(34,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     The only thing that might change is
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     create_engine()
+    </span>
+   </span>
+  </p>
+ </li>
+ <li &quot;space="" 15pt;="" 34);="" 34,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(34,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     The rest will be the same for all your databases
+    </span>
+   </span>
+  </p>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p center;margin-top:0pt;margin-bottom:0pt;\"="" dir='\"ltr\"' style='\"line-height:1.2;text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   create_engine
+  </span>
+ </span>
+</p>
+<p 0pt;="" 0pt;\"="" 1.2;="" center;="" dir='\"ltr\"' line-height:="" margin-bottom:="" margin-top:="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+  <span &quot;space="" 15pt;="" 34);="" 34,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(34,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:147px;\"'>
+    <img height='\"147\"' src='\"https://lh3.googleusercontent.com/q7KR_ONJ_IKfaPMDxGab7EjXwWdJ_0zlTP-ThgNYH81Hh5dmoPg-69OGcHPzWdp4pzUrdV-vEl1PXFRNN9UlQbgfUVhLOcn8tfZU5q6g5v_8VM5aMRW1UxJO1D-h4zn7ysqucOsqaPINIt2BI8K6ons\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<ul 0px;="" 48px;\"="" padding-inline-start:="" style='\"margin-bottom:'>
+ <li &quot;space="" 15pt;="" 34);="" 34,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" pre;\"="" rgb(34,="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span 15pt;="" background-color:="" baseline;="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     After running this, you have an open session, where you can edit your database
+    </span>
+   </span>
+  </p>
+ </li>
+ <li &quot;proxima="" 15pt;="" 34);="" 34,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" nova&quot;,="" pre;\"="" rgb(34,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span id='\"docs-internal-guid-40a199ed-7fff-c860-7c77-54edadf6b7bc\"'>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     The changes will be stored in the
+    </span>
+    <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     lecture.db
+    </span>
+    <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"font-size:' text-wrap:="" transparent;="" vertical-align:="" wrap;\"="">
+     file, as defined in your engine
+    </span>
+   </span>
+  </p>
+ </li>
+ <li &quot;proxima="" 15pt;="" 34);="" 34,="" aria-level='\"1\"' background-color:="" baseline;="" color:="" dir='\"ltr\"' disc;="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" normal;="" nova&quot;,="" pre;\"="" rgb(34,="" sans-serif;="" style='\"list-style-type:' transparent;="" vertical-align:="" white-space:="">
+  <p dir='\"ltr\"' role='\"presentation\"' style='\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"'>
+   <span &quot;space="" 15pt;="" baseline;\"="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"background-color:' transparent;="" vertical-align:="">
+    The
+   </span>
+   <span &quot;space="" 128);="" 15pt;="" 56,="" 700;="" baseline;\"="" color:="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" rgb(242,="" style='\"background-color:' transparent;="" vertical-align:="">
+    .db
+   </span>
+   <span &quot;space="" 15pt;="" baseline;\"="" font-family:="" font-size:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" style='\"background-color:' transparent;="" vertical-align:="">
+    file is always the database!
+   </span>
+  </p>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p center;\"="" style='\"text-align:'>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p center;\"="" style='\"text-align:'>
+ <span id='\"docs-internal-guid-bc79c53f-7fff-8144-5a27-0f5b8a0a7895\"'>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <span style='\"border:none;display:inline-block;overflow:hidden;width:624px;height:343px;\"'>
+    <img height='\"343\"' src='\"https://lh6.googleusercontent.com/Z80gpVw2nT0JG4OsIWTMLySWEl3CZnLbe7WhYqpELNRjtqbyW4dBhDzn3ZtI_hAkKEMqVS-52m8zar7iy1t5GShiYh-y7p8rX7QaYuCBLeGhiUzpBV8x0l8luVXh2z_KUHbYgMxq6UJLp5vDRltMe9I\"' style='\"margin-left:0px;margin-top:0px;\"' width='\"624\"'/>
+   </span>
+  </span>
+ </span>
+</p>
+<p>
+ <span id='\"docs-internal-guid-42fc108e-7fff-df92-0701-0d2eb940bf41\"'>
+  <span &quot;space="" 15pt;="" background-color:="" baseline;="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   We have just created our .db file, which is our database! Or, from previous examples, is basically the refrigerator that the restaurant has in the kitchen
+  </span>
+ </span>
+</p>
+<p>
+ <span id='\"docs-internal-guid-e5365a29-7fff-6413-02c5-1c48174b7b81\"'>
+  <span &quot;space="" 15pt;="" 163);="" 700;="" 83,="" background-color:="" baseline;="" color:="" font-family:="" font-variant-alternates:="" font-variant-east-asian:="" font-variant-numeric:="" font-weight:="" mono&quot;,="" monospace;="" normal;="" preserve;\"="" rgb(0,="" style='\"font-size:' transparent;="" vertical-align:="" white-space-collapse:="">
+   <br/>
+  </span>
+ </span>
+</p>
+","type":"TEXT","id":623740,"modified":false,"longId":623740,"idName":"id","compositeKeys":null,"valid":true,"new":false}]}
